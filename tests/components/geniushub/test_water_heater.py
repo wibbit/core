@@ -22,9 +22,7 @@ async def test_cloud_all_water_heaters(
     snapshot: SnapshotAssertion,
 ) -> None:
     """Test the creation of the Genius Hub water heater entities."""
-    with patch(
-        "homeassistant.components.geniushub.PLATFORMS", [Platform.WATER_HEATER]
-    ):
+    with patch("homeassistant.components.geniushub.PLATFORMS", [Platform.WATER_HEATER]):
         await setup_integration(hass, mock_cloud_config_entry)
 
     await snapshot_platform(

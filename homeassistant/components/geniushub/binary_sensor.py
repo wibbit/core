@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
-from homeassistant.components.binary_sensor import BinarySensorDeviceClass, BinarySensorEntity
+from homeassistant.components.binary_sensor import (
+    BinarySensorDeviceClass,
+    BinarySensorEntity,
+)
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
@@ -12,7 +15,12 @@ from .entity import GeniusDevice, GeniusZone
 GH_STATE_ATTR = "outputOnOff"
 GH_TYPE = "Receiver"
 
-GH_ZONES_WITH_DEMAND = ["radiator", "wet underfloor", "on / off", "hot water temperature"]
+GH_ZONES_WITH_DEMAND = [
+    "radiator",
+    "wet underfloor",
+    "on / off",
+    "hot water temperature",
+]
 
 
 async def async_setup_entry(
